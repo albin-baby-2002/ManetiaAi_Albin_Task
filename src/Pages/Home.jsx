@@ -9,6 +9,7 @@ import Portfolio from '../Components/HomeComponents/Portfolio/Portfolio'
 import AboutUs from '../Components/HomeComponents/AboutUs/AboutUs'
 import Testimonial from '../Components/HomeComponents/Testimonial/Testimonial'
 import Articles from '../Components/HomeComponents/Articles/Articles'
+import Footer from '../Components/CommonComponents/Footer/Footer'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <AboutUs/>
       <Testimonial/>
       <Articles/>
+      <Footer/>
     </div>
   
   )

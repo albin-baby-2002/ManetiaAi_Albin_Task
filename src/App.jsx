@@ -2,6 +2,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import Data from "./Pages/Data";
+import Contact from "./Pages/Contact";
 
 function App() {
   const router = createBrowserRouter(
@@ -10,9 +11,9 @@ function App() {
         <Route path="/">
         
           <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           
-          {/* data page for testing route remove later */}
-          <Route path="/data" element={<Data />} />
+          
         </Route>
       </>,
     ),

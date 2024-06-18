@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const TalkToUs = () => {
   return (
-    <div className=" flex items-center text-base gap-3 px-6 xl:px-8 py-2 xl:py-3 border-2 rounded-lg">
-      <div className="size-5 xl:size-6">
-        <img src="./icons/phone.png" alt="" className="object-contain" />
+    <Link to={'/contact'}>
+      <div className="flex items-center gap-3 rounded-lg border-2 px-6 py-2 text-base hover:cursor-pointer xl:px-8 xl:py-3">
+        <div className="size-5 xl:size-6">
+          <img src="./icons/phone.png" alt="" className="object-contain" />
+        </div>
+        <p>Talk To Us</p>
       </div>
-      <p>Talk To Us</p>
-    </div>
+    </Link>
   );
 }
 
