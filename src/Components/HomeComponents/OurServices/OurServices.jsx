@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../UIcomponets/Container";
+import Container from "../../uiCustom/Container";
 
 const OurServices = () => {
   const services = [
@@ -38,7 +38,7 @@ const OurServices = () => {
             <p className="text-3xl font-semibold">Growth based Services</p>
           </div>
 
-          <div className="grid grid-cols-4 text-center gap-4">
+          <div className="grid grid-cols-4 gap-4 text-center">
             {services.map((service, idx) => (
               <div className="flex flex-col gap-4 border-2 border-brigh-blue px-5 pb-10 pt-6 hover:bg-brigh-blue">
                 <div className="items- flex justify-center px-3 py-3">

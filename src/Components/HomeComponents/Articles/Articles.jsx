@@ -1,11 +1,10 @@
-import React from 'react'
-import Container from '../../UIcomponets/Container';
-import ArticleCard from './ArticleCard/ArticleCard';
+import React from "react";
+import Container from "../../uiCustom/Container";
+import ArticleCard from "./ArticleCard/ArticleCard";
 
 const Articles = () => {
-    
-    const Articles = ['Article1','Article2','Article3'];
-    
+  const Articles = ["Article1", "Article2", "Article3"];
+
   return (
     <div className="bg-white py-20 font-Inter">
       <Container>
@@ -21,7 +20,7 @@ const Articles = () => {
             ))}
           </div>
 
-          <div className=' flex  justify-center'>
+          <div className="flex justify-center">
             <button className="flex items-center gap-6 rounded-2xl bg-navy-blue px-10 py-4 text-white">
               <p>Read more</p>
               <div className="flex size-5 items-center xl:size-6">
@@ -37,6 +36,6 @@ const Articles = () => {
       </Container>
     </div>
   );
-}
+};
 
-export default Articles
+export default Articles;

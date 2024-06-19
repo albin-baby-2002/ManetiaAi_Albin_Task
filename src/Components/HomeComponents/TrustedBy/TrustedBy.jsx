@@ -1,10 +1,9 @@
 import React from "react";
-import Container from "../../UIcomponets/Container";
+import Container from "../../uiCustom/Container";
 
 const TrustedBy = () => {
-    
-    const companies = ['Google','Canva','Amazon','Sketch'];
-    
+  const companies = ["Google", "Canva", "Amazon", "Sketch"];
+
   return (
     <div className="bg-navy-blue text-white">
       <Container>
@@ -16,10 +15,10 @@ const TrustedBy = () => {
 
           <div className="grid w-2/3 grid-cols-4">
             {companies.map((val, idx) => (
-              <div key={idx} className=" flex items- justify-center px-3 py-3">
+              <div key={idx} className="items- flex justify-center px-3 py-3">
                 <img
                   src={`./home/TrustedCompanies/${val}.png`}
-                  className="object-contain max-w-24 xl:max-w-32"
+                  className="max-w-24 object-contain xl:max-w-32"
                   alt=""
                 />
               </div>

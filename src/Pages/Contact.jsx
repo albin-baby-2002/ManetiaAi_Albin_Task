@@ -1,17 +1,19 @@
-import React from 'react'
-import Container from '../Components/UIcomponets/Container'
-import ContactHeadAndNav from '../Components/ContactComponents/ContactHeadinAndNav/ContactHeadAndNav'
-import ContactForm from '../Components/ContactComponents/ContactForm/ContactForm'
+import React from "react";
+import Container from "../components/uiCustom/Container";
+import ContactHeadAndNav from "../components/ContactComponents/ContactHeadinAndNav/ContactHeadAndNav";
+import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
 
 const Contact = () => {
   return (
-    <div >
+    <div>
       <Container px_none>
-        <ContactHeadAndNav/>
-        <ContactForm/>
+        <div className="flex">
+          <ContactHeadAndNav />
+          <ContactForm />
+        </div>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -1,5 +1,5 @@
-import React from 'react'
-import Container from '../../UIcomponets/Container';
+import React from "react";
+import Container from "../../uiCustom/Container";
 
 const Testimonial = () => {
   return (
@@ -74,6 +74,6 @@ const Testimonial = () => {
       </Container>
     </div>
   );
-}
+};
 
-export default Testimonial
+export default Testimonial;

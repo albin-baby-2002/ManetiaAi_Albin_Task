@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../UIcomponets/Container";
+import Container from "../../uiCustom/Container";
 
 const AboutUs = () => {
   return (

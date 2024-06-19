@@ -1,19 +1,19 @@
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
-import Data from "./Pages/Data";
+import Data from "./Pages/CustomerDashboard";
 import Contact from "./Pages/Contact";
+import CustomersData from "./Pages/CustomerDashboard";
+import CustomerDashboard from "./Pages/CustomerDashboard";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/">
-        
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          
-          
+          <Route path="/customers" element={<CustomerDashboard />} />
         </Route>
       </>,
     ),

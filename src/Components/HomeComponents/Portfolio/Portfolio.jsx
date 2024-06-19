@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../UIcomponets/Container";
+import Container from "../../uiCustom/Container";
 
 const Portfolio = () => {
   const frames = [
@@ -33,9 +33,9 @@ const Portfolio = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            <button className=" flex items-center rounded-2xl gap-6 bg-navy-blue px-10 py-4 text-white">
+            <button className="flex items-center gap-6 rounded-2xl bg-navy-blue px-10 py-4 text-white">
               <p>View more</p>
-              <div className=" flex items-center size-5 xl:size-6">
+              <div className="flex size-5 items-center xl:size-6">
                 <img
                   src="./icons/ArrowRight.png"
                   alt=""
