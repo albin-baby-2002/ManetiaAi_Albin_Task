@@ -3,6 +3,7 @@ import Container from "../../uiCustom/Container";
 import Logo from "../Logo/Logo";
 import CenterNav from "./CenterNav/CenterNav";
 import TalkToUs from "./TalkToUs/TalkToUs";
+import MobileNav from "./MobileNav/MobileNav";
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
           <Logo />
           <CenterNav />
           <TalkToUs />
+          <MobileNav/>
         </div>
       </Container>
     </div>

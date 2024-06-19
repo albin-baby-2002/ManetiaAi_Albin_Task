@@ -6,35 +6,56 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import React from 'react'
+import React from "react";
 import { Label } from "../ui/label";
 
-const SelectInput = ({label,labelSemiBold}) => {
+const SelectInput = ({
+  id,
+  register,
+  errors,
+  setValue,
+  values,
+  label,
+  trigger,
+  labelSemiBold,
+}) => {
   return (
-    <div className=" grid gap-1.5 ">
+    <div className="grid gap-1.5">
       <Label
-        className={`
-            ${labelSemiBold ? "font-semibold" : ""}
-             text-mirage font-Inter `}
+        className={` ${labelSemiBold ? "font-semibold" : ""} font-Inter text-mirage`}
         htmlFor={label}
       >
         {label}
       </Label>
 
-      <Select>
+      <Select
+        onValueChange={(val) => {
+          
+          setValue(id, val);
+          trigger(id);
+        }}
+      >
         <SelectTrigger className="w-full">
-          <SelectValue placeholder="Theme" />
+          <SelectValue placeholder={"select"} />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="light">Light</SelectItem>
-          <SelectItem value="dark">Dark</SelectItem>
-          <SelectItem value="system">System</SelectItem>
+          {values &&
+            values.map((val, idx) => (
+              <SelectItem key={idx} value={val}>
+                {val}
+              </SelectItem>
+            ))}
         </SelectContent>
       </Select>
+      <div className=" h-[24px]">
+        {errors[id] && (
+          <p className="ps-1 pt-1 text-xs font-semibold text-rose-400">
+            {errors[id]?.message}
+          </p>
+        )}
+      </div>
     </div>
   );
-}
+};
 
-export default SelectInput
-
-
+export default SelectInput;

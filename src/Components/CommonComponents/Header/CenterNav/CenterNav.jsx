@@ -2,7 +2,7 @@ import React from "react";
 
 const CenterNav = () => {
   return (
-    <div className="flex items-center gap-10  text-base xl:text-xl">
+    <div className=" hidden sm:flex items-center gap-10  text-base xl:text-xl">
       <p>Services</p>
       <p>Portfolio</p>
       <p>About us</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContactHeadAndNav = () => {
   const companies = [
@@ -12,12 +13,14 @@ const ContactHeadAndNav = () => {
 
   return (
     <div className="w-1/2 bg-light-gray py-10 pr-7 ps-10 xl:ps-20">
-      <div className="flex items-center gap-4">
-        <div className="size-3">
-          <img src="./icons/Contact/arrowBack.png" alt="" />
+      <Link to={"/"}>
+        <div className="flex items-center gap-4">
+          <div className="size-3">
+            <img src="./icons/Contact/arrowBack.png" alt="" />
+          </div>
+          <p className="text-sm font-medium">Home</p>
         </div>
-        <p className="text-sm font-medium">Home</p>
-      </div>
+      </Link>
 
       <div className="mt-6">
         <p className="font-Plus-Jakarta-Sans text-4xl font-semibold">Contact</p>
@@ -39,14 +42,18 @@ const ContactHeadAndNav = () => {
         senior web expert will be in touch shortly.
       </p>
 
-      <p className="text-blue-lotus pb-5 text-sm font-bold">
+      <p className="pb-5 text-sm font-bold text-blue-lotus">
         Join 6,000+ forward-thinking companies:
       </p>
 
-      <div className=" grid grid-cols-6 gap-6">
+      <div className="grid grid-cols-6 gap-6">
         {companies.map((company, idx) => (
-          <div className="h-7 flex justify-center  " key={idx}>
-            <img src={`./icons/Contact/${company}`}  className="  h-full  object-contain" alt="" />
+          <div className="flex h-7 justify-center" key={idx}>
+            <img
+              src={`./icons/Contact/${company}`}
+              className="h-full object-contain"
+              alt=""
+            />
           </div>
         ))}
       </div>
