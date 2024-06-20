@@ -16,7 +16,7 @@ const FooterContact = () => {
         <p className="pt-3 text-xl font-bold">Navytech</p>
       </div>
 
-      <div className="font-Poppins">
+      <div className="font-Poppins text-sm lg:text-base ">
         <p>hello@navytech.com</p>
         <p>Phone : +01 23456789</p>
       </div>

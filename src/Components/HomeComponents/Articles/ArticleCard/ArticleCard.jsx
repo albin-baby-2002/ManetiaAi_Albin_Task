@@ -2,7 +2,7 @@ import React from 'react'
 
 const ArticleCard = ({Article}) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className=" max-w-[350px]  sm:max-w-none mx-auto sm:mx-0  flex flex-col gap-4">
       <div>
         <img
           src={`./home/Articles/${Article}.png`}
@@ -12,12 +12,12 @@ const ArticleCard = ({Article}) => {
       </div>
 
       <div>
-        <div className="flex justify-between text-xs">
+        <div className="flex justify-between text-[10px] md:text-xs">
           <div className="flex gap-2">
             <div className="flex size-4 items-center">
               <img src="./icons/User.png" alt="" className="object-contain" />
             </div>
-            <p>John Doe</p>
+            <p className=''>John Doe</p>
           </div>
 
           <div className="flex gap-2">
@@ -34,7 +34,7 @@ const ArticleCard = ({Article}) => {
       </div>
 
       <div>
-        <p className="text-xl font-bold">
+        <p className= " md:text-xl font-bold">
           Lorem ipsum dolor sit amet consectetur.
         </p>
       </div>

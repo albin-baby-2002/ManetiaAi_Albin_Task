@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div className="bg-dark-blue text-white">
       <Container>
-        <div className="flex items-center justify-between py-20">
+        <div className="flex items-center justify-between py-10 sm:py-14 md:py-20">
           <Pitch />
           <HeroImg />
         </div>

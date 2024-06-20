@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="bg-dark-blue text-white">
       <Container>
-        <div className="flex justify-between py-20 font-Inter">
+        <div className="flex flex-col justify-between  gap-14 py-14 font-Inter md:flex-row md:gap-0  md:py-16 xl:gap-20 xl:py-20">
           <FooterContact />
           <QuickLinks />
           <ResourcesLinks />

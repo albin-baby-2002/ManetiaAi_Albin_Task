@@ -10,15 +10,17 @@ const QuickLinks = () => {
   ];
 
   return (
-    <div className=' flex flex-col gap-6'>
-      <p className=' text-xl font-bold'>Quick Links</p>
-      <div className=' flex flex-col gap-2'>
-        {links.map((val,idx)=>(
-          <p>{val}</p>
+    <div className="flex flex-col gap-6">
+      <p className="text-lg font-bold md:text-center lg:text-left lg:text-xl">
+        Quick Links
+      </p>
+      <div className="flex flex-col gap-2 md:text-center lg:text-left">
+        {links.map((val, idx) => (
+          <p key={idx}>{val}</p>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default QuickLinks

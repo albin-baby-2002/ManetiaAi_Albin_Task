@@ -30,7 +30,6 @@ const SelectInput = ({
 
       <Select
         onValueChange={(val) => {
-          
           setValue(id, val);
           trigger(id);
         }}
@@ -47,13 +46,16 @@ const SelectInput = ({
             ))}
         </SelectContent>
       </Select>
-      <div className=" h-[24px]">
-        {errors[id] && (
-          <p className="ps-1 pt-1 text-xs font-semibold text-rose-400">
-            {errors[id]?.message}
-          </p>
-        )}
-      </div>
+
+      {errors && (
+        <div className="h-[24px]">
+          {errors[id] && (
+            <p className="ps-1 pt-1 text-xs font-semibold text-rose-400">
+              {errors[id]?.message}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

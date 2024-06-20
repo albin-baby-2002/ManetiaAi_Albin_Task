@@ -12,19 +12,19 @@ const OurServices = () => {
     {
       title: "Web Development",
       description:
-        "Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
       img: "DeviceMobile.png",
     },
     {
       title: "Mobile Development",
       description:
-        "Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
       img: "GlobeHemisphereWest.png",
     },
     {
       title: "Digital Marketing",
       description:
-        "Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
       img: "PaintBrush.png",
     },
   ];
@@ -32,28 +32,30 @@ const OurServices = () => {
   return (
     <div className="font-Inter">
       <Container>
-        <div className="flex flex-col gap-16 py-16 xl:gap-20 xl:py-20">
+        <div className="flex flex-col gap-14 py-14 md:gap-16 md:py-16 xl:gap-20 xl:py-20">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-lg text-gray-500 xl:text-xl">Our Services</p>
-            <p className="text-3xl font-semibold">Growth based Services</p>
+            <p className="text-gray-500 md:text-lg xl:text-xl">Our Services</p>
+            <p className="text-2xl font-semibold md:text-3xl">
+              Growth based Services
+            </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, idx) => (
-              <div className="flex flex-col gap-4 border-2 border-brigh-blue px-5 pb-10 pt-6 hover:bg-brigh-blue">
+              <div key={idx} className="mx-auto flex max-w-[450px] flex-col gap-4 border-2 border-brigh-blue px-5 pb-10 pt-6 hover:bg-brigh-blue sm:max-w-none">
                 <div className="items- flex justify-center px-3 py-3">
                   <img
                     src={`./home/Services/${service.img}`}
-                    className="max-w-24 object-contain xl:max-w-32"
+                    className="max-w-12 object-contain lg:max-w-24 xl:max-w-32"
                     alt=""
                   />
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <p className="text-xl font-semibold xl:text-2xl">
+                  <p className="text-lg font-semibold sm:text-xl xl:text-2xl">
                     {service.title}
                   </p>
-                  <p className="text-sm">{service.description}</p>
+                  <p className="text-xs sm:text-sm">{service.description}</p>
                 </div>
 
                 <div className="flex items-center justify-center">

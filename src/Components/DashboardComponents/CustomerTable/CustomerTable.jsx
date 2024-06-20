@@ -1,10 +1,9 @@
-
-
 import InputWIthIcon from "@/components/uiCustom/InputWIthIcon";
 import SelectInput from "@/components/uiCustom/SelectInput";
 import { columns } from "./Columns/Columns";
 import { DataTable } from "./Table/Table";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 async function getData() {
   // Fetch data from your API here.
@@ -16,25 +15,32 @@ async function getData() {
       email: "m@example.com",
     },
     // ...
-  ]
+  ];
 }
 
-export default  function CustomerTable() {
-  const data = [
-    {
-      name: "728ed52f",
-      company: 100,
-      phone: "pending",
-      actions: "m@example.com",
-    },
-    {
-      name: "728ed52f",
-      company: 100,
-      phone: "pending",
-      actions: "m@example.com",
-    },
-    // ...
-  ];
+export default function CustomerTable() {
+  const [data, setData] = useState([]);
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log("effect");
+    const getData = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/users",
+        );
+
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+
+    getData();
+  }, []);
 
   return (
     <div className="my-10 rounded-xl border">
@@ -44,7 +50,7 @@ export default  function CustomerTable() {
         </div>
       </div>
 
-      <div className="flex px-5 py-3 gap-4 items-center">
+      <div className="flex items-center gap-4 px-5 py-3">
         <div className="w-5/6">
           <InputWIthIcon />
         </div>
@@ -53,8 +59,7 @@ export default  function CustomerTable() {
           <SelectInput />
         </div>
       </div>
-
-      <DataTable columns={columns} data={data} />
+      {data && <DataTable columns={columns} data={data} loading={loading} />}
     </div>
   );
 }
