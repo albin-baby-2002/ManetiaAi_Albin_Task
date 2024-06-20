@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
 import {
-
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
   useReactTable,
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
 import {
   Table,
@@ -15,23 +14,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/table";
 import { DataTablePagination } from "../Pagination/Pagination";
 
-
-
-export function DataTable({
-  columns,
-  data,
-  loading
-}) {
+export function DataTable({ columns, data, loading }) {
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel:getPaginationRowModel()
-  })
+    getPaginationRowModel: getPaginationRowModel(),
+  });
 
   return (
     <div className="rounded-md border-t">
@@ -57,8 +49,12 @@ export function DataTable({
         <TableBody>
           {loading ? (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-40 text-center">
-                ... loading
+              <TableCell colSpan={columns.length} className="h-56 text-center">
+                <div className="flex h-full w-full items-center justify-center">
+                  <div className="size-20">
+                    <img src="./loaders/loader.svg" alt="" />
+                  </div>
+                </div>
               </TableCell>
             </TableRow>
           ) : table.getRowModel().rows?.length ? (
@@ -76,7 +72,7 @@ export function DataTable({
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+              <TableCell colSpan={columns.length} className="h-56 text-center">
                 No results.
               </TableCell>
             </TableRow>

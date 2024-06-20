@@ -4,28 +4,25 @@ import { Triangle } from "lucide-react";
 import { useEffect } from "react";
 
 export function InputWithLabel({
-  id="",
+  id = "",
   register,
-  errors = null,
+  errors ,
   label,
   type = "text",
   labelSemiBold,
   trigger,
-  watchVal
+  watchVal,
 }) {
-  
-  useEffect(()=>{
-    
-    if(watchVal){
-      console.log(watchVal)
-      trigger(id)
+  useEffect(() => {
+    if (watchVal) {
+      trigger(id);
     }
-  },[watchVal])
-  
+  }, [watchVal]);
+
   return (
     <div className="grid w-full items-center gap-1.5">
       <Label
-        className={`${labelSemiBold ? "font-semibold" : ""} font-Inter text-mirage`}
+        className={`${labelSemiBold ? "font-semibold" : ""} font-Inter text-sm text-mirage`}
         htmlFor={label}
       >
         {label}
@@ -44,7 +41,7 @@ export function InputWithLabel({
 
       <div className="h-[24px]">
         {errors[id] && (
-          <p className="ps-1 pt-1 text-xs font-semibold text-rose-400">
+          <p className="ps-1 pt-1 text-[10px] font-semibold text-rose-400 lg:text-xs">
             {errors[id]?.message}
           </p>
         )}

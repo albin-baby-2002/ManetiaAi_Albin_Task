@@ -1,5 +1,4 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -8,17 +7,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 
 export function DataTablePagination({ table }) {
  
 
   return (
     <div className="flex items-center justify-end px-2 py-2 border-t">
-      {/* <div className="flex-1 text-sm text-muted-foreground">
-        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
-      </div> */}
+      
       <div className="flex items-center ">
         <div className="flex items-center space-x-2">
           <p className="text-xs font-medium text-gray-500">Rows per page</p>
@@ -45,15 +40,7 @@ export function DataTablePagination({ table }) {
           {table.getPageCount()}
         </div>
         <div className="flex items-center space-x-2">
-          {/* <Button
-            variant="outline"
-            className="hidden h-8 w-8 p-0 lg:flex"
-            onClick={() => table.setPageIndex(0)}
-            disabled={!table.getCanPreviousPage()}
-          >
-            <span className="sr-only">Go to first page</span>
-            <ChevronsLeft className="h-4 w-4" />
-          </Button> */}
+         
           <Button
             variant="outline"
             className="h-8 w-8 cursor-pointer border-none p-0"
@@ -73,15 +60,7 @@ export function DataTablePagination({ table }) {
             <p>{}</p>
             <FaChevronRight size={14} />
           </Button>
-          {/* <Button
-            variant="outline"
-            className="hidden h-8 w-8 p-0 lg:flex"
-            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-            disabled={!table.getCanNextPage()}
-          >
-            <span className="sr-only">Go to last page</span>
-            <ChevronsRight className="h-4 w-4" />
-          </Button> */}
+          
         </div>
       </div>
     </div>

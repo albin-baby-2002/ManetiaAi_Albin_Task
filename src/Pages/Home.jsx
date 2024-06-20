@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "../components/uiCustom/Container";
-import { FaBars } from "react-icons/fa";
 import Header from "../components/CommonComponents/Header/Header";
 import HeroSection from "../components/HomeComponents/HeroSection/HeroSection";
 import TrustedBy from "../components/HomeComponents/TrustedBy/TrustedBy";

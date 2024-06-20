@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
       <Container px_none>
-        <div className="flex">
+        <div className="flex ">
           <ContactHeadAndNav />
           <ContactForm />
         </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { FaArrowLeft, FaBars } from "react-icons/fa";
-import TalkToUs from "../TalkToUs/TalkToUs";
-import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 const MobileNav = () => {
+  const links = ["Services", "Portfolio", "About us", "Testimonial"];
+
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
@@ -27,14 +27,11 @@ const MobileNav = () => {
             </p>
           </div>
 
-          <p className="flex items-center py-6 hover:bg-gray-200">Services</p>
-          <p className="flex items-center py-6 hover:bg-gray-200">Portfolio</p>
-          <p className="flex items-center py-6 hover:bg-gray-200">About us</p>
-          <p className="flex items-center py-6 hover:bg-gray-200">
-            Testimonial
-          </p>
-
-        
+          {links.map((link, idx) => (
+            <p key={idx} className="flex items-center py-6 hover:bg-gray-200">
+              {link}
+            </p>
+          ))}
         </div>
       )}
     </div>

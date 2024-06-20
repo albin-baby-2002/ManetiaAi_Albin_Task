@@ -3,7 +3,12 @@ import SelectInput from "@/components/uiCustom/SelectInput";
 import TextAreaWithLabel from "@/components/uiCustom/TextAreaWithLabel";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import {  companySizesEnum, contactFormSchema, projectBudgetEnum, teamsEnum } from "@/Schemas/ContactFormSchema";
+import {
+  companySizesEnum,
+  contactFormSchema,
+  projectBudgetEnum,
+  teamsEnum,
+} from "@/Schemas/ContactFormSchema";
 
 const ContactForm = () => {
   const {
@@ -27,30 +32,16 @@ const ContactForm = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const [
-    fullName,
-    companyName,
-    phoneNumber,
-    message,
-    workEmail,
-    companySize,
-    team,
-    projectBudget,
-  ] = watch([
+  const [fullName, companyName, phoneNumber, message, workEmail] = watch([
     "fullName",
     "companyName",
     "phoneNumber",
     "message",
     "workEmail",
-    "companySize",
-    "team",
-    "projectBudget",
   ]);
-  
-
 
   return (
-    <div className="w-1/2 pb-10 pr-10 ps-10 pt-28 font-Inter">
+    <div className="w-3/5 px-6 pb-10 pt-16 font-Inter md:w-[55%] lg:w-1/2 lg:px-10 lg:pt-28">
       <p className="font-Plus-Jakarta-Sans font-bold">Fill the form below</p>
       <div className="mt-6 grid gap-2">
         <div className="grid grid-cols-2 gap-4 gap-y-2">
@@ -135,12 +126,17 @@ const ContactForm = () => {
           labelSemiBold
         />
 
-        <div className=" w-full pt-3">
-          <button onClick={handleSubmit((data)=>{console.log(data)})} className="w-full rounded-xl bg-blue-lotus py-2 font-semibold text-white">
+        <div className="w-full pt-3">
+          <button
+            onClick={handleSubmit((data) => {
+              console.log(data);
+            })}
+            className="w-full rounded-xl bg-blue-lotus py-2 text-sm font-semibold text-white md:text-base"
+          >
             Let's Talk
           </button>
 
-          <div className= " fixed bottom-0 right-0 size-20">
+          <div className="fixed bottom-0 right-0 size-20">
             <img src="./icons/Contact/Settings.png" alt="" />
           </div>
         </div>

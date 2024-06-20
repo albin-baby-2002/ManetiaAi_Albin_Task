@@ -1,9 +1,11 @@
-
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Home from "./Pages/Home";
-import Data from "./Pages/CustomerDashboard";
 import Contact from "./Pages/Contact";
-import CustomersData from "./Pages/CustomerDashboard";
 import CustomerDashboard from "./Pages/CustomerDashboard";
 
 function App() {
@@ -23,5 +25,3 @@ function App() {
 }
 
 export default App;
-
-

@@ -44,7 +44,7 @@ const AboutUs = () => {
             </div>
 
             <div className="flex flex-col gap-7 md:w-1/2 xl:gap-8">
-              <p className="text-center text-sm md:text-base md:text-left xl:text-lg">
+              <p className="text-center text-sm md:text-left md:text-base xl:text-lg">
                 Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit
                 dolor fringilla volutpat lectus amet. Integer sed pretium odio
                 lectus at malesuada sed eget nunc. Viverra malesuada viverra id
@@ -78,10 +78,10 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              <div className="flex justify-center md:justify-start mt-4 md:mt-0">
+              <div className="mt-4 flex justify-center md:mt-0 md:justify-start">
                 <button className="flex items-center gap-6 rounded-2xl bg-navy-blue px-10 py-4 text-white">
                   <p className="text-sm md:text-base">Read more</p>
-                  <div className="flex size-3 md:size-5 items-center xl:size-6">
+                  <div className="flex size-3 items-center md:size-5 xl:size-6">
                     <img
                       src="./icons/ArrowRight.png"
                       alt=""

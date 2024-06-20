@@ -5,26 +5,12 @@ import { DataTable } from "./Table/Table";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-async function getData() {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    // ...
-  ];
-}
-
 export default function CustomerTable() {
   const [data, setData] = useState([]);
 
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("effect");
     const getData = async () => {
       try {
         setLoading(true);
@@ -32,8 +18,10 @@ export default function CustomerTable() {
           "https://jsonplaceholder.typicode.com/users",
         );
 
-        setData(response.data);
-        setLoading(false);
+        setTimeout(() => {
+          setData(response.data);
+          setLoading(false);
+        }, 1000);
       } catch (error) {
         setLoading(false);
       }

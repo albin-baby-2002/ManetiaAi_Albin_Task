@@ -50,7 +50,7 @@ const SelectInput = ({
       {errors && (
         <div className="h-[24px]">
           {errors[id] && (
-            <p className="ps-1 pt-1 text-xs font-semibold text-rose-400">
+            <p className="ps-1 pt-1 text-[10px] font-semibold text-rose-400 lg:text-xs">
               {errors[id]?.message}
             </p>
           )}

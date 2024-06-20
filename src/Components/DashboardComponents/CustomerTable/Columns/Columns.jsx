@@ -30,10 +30,10 @@ export const columns = [
     header: "Name",
     cell: ({ row }) => {
       return (
-        <div className=" flex items-center gap-3">
-          <div className=" size-10">
+        <div className="flex items-center gap-3">
+          <div className="size-10">
             <img
-            className=" rounded-full"
+              className="rounded-full"
               src={`./icons/Avatars/Avatar${Math.floor(Math.random() * 4 + 1)}.png`}
               alt=""
             />

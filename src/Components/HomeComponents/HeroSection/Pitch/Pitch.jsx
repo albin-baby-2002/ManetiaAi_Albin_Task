@@ -1,15 +1,34 @@
 import React from "react";
+import AchievementCard from "./AchievementCard/AchievementCard";
 
 const Pitch = () => {
+  const Achievements = [
+    {
+      title: "Projects Completed",
+      smallTitle: "Projects",
+      val: "75",
+    },
+    {
+      title: "Years of Experience",
+      smallTitle: "Years",
+      val: "20",
+    },
+    {
+      title: "Clients Worldwide",
+      smallTitle: "Clients",
+      val: "400",
+    },
+  ];
+
   return (
-    <div className=" lg:w-1/2">
+    <div className="lg:w-1/2">
       {/* pitch text */}
 
       <div className="flex flex-col gap-8 lg:gap-4">
-        <p className="text-center font-Outfit text-4xl sm:text-5xl font-medium leading-[1.2] lg:text-left md:text-6xl lg:text-[50px] xl:text-[64px]">
+        <p className="text-center font-Outfit text-4xl font-medium leading-[1.2] sm:text-5xl md:text-6xl lg:text-left lg:text-[50px] xl:text-[64px]">
           #1 Worldwide Digital Solution Agency
         </p>
-        <p className="text-center text-sm lg:text-left md:mx-auto md:w-4/6 lg:w-auto  md:text-base xl:text-xl">
+        <p className="text-center text-sm md:mx-auto md:w-4/6 md:text-base lg:w-auto lg:text-left xl:text-xl">
           Revolutionize your global digital strategy with the #1 Worldwide
           Digital Solution Agency, pioneering innovative solutions for
           unparalleled success.
@@ -29,49 +48,15 @@ const Pitch = () => {
 
       {/* achievements */}
 
-      <div className="mt-5  flex justify-center lg:justify-start gap-4 font-Inter">
-        <div className="rounded-2xl bg-gradient-to-r from-white/10 from-10% via-white via-50% to-white/10 to-100%">
-          <div className="my-[1px] rounded-2xl bg-dark-blue">
-            <div className="flex flex-col items-center gap-2 rounded-2xl bg-white/10 px-10 sm:px-14 md:px-16 lg:px-4 py-3 xl:px-10">
-              <p className="z-10 text-sm sm:text-lg font-semibold text-white lg:text-2xl xl:text-3xl">
-                75K+
-              </p>
-              <p className="hidden  lg:block lg:text-xs">
-                Project Completed
-              </p>
-              <p className="text-[10px] lg:hidden xl:text-xs">Projects</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-gradient-to-r from-white/10 from-10% via-white via-50% to-white/10 to-100%">
-          <div className="my-[1px] rounded-2xl bg-dark-blue">
-            <div className="flex flex-col items-center gap-2 rounded-2xl bg-white/10 px-10 sm:px-14 md:px-16 lg:px-4 py-3 xl:px-10">
-              <p className="z-10 text-sm sm:text-lg font-semibold text-white lg:text-2xl xl:text-3xl">
-                20+
-              </p>
-
-              <p className="hidden  lg:block lg:text-xs">
-                Years of Experience
-              </p>
-              <p className="text-[10px] lg:hidden xl:text-xs">Years</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-gradient-to-r from-white/10 from-10% via-white via-50% to-white/10 to-100%">
-          <div className="my-[1px] rounded-2xl bg-dark-blue">
-            <div className="flex flex-col items-center gap-2 rounded-2xl bg-white/10 px-10 sm:px-14 md:px-16 lg:px-4 py-3 xl:px-10">
-              <p className="z-10 text-sm sm:text-lg font-semibold text-white lg:text-2xl xl:text-3xl">
-                400+
-              </p>
-              <p className="hidden  lg:block lg:text-xs">
-                Clients Worldwide
-              </p>
-              <p className="text-[10px] lg:hidden xl:text-xs">Clients</p>
-            </div>
-          </div>
-        </div>
+      <div className="mt-5 flex justify-center gap-4 font-Inter lg:justify-start">
+        {Achievements.map((Achievement, idx) => (
+          <AchievementCard
+            key={idx}
+            title={Achievement.title}
+            smallTitle={Achievement.smallTitle}
+            val={Achievement.val}
+          />
+        ))}
       </div>
     </div>
   );
